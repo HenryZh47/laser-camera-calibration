@@ -2,8 +2,6 @@ function [] = pcd_trim(CLOUD_PATH, OUTPUT_PATH)
 
     %% PCD trim for lidar-camera calibration
     %% parameters
-    %CLOUD_PATH = './../data/lidar_thermal_extrinsics/2019-05-31-pcd/1559336151.980071068.pcd';
-    %OUTPUT_PATH = './../data/lidar_thermal_extrinsics/2019-05-31-xyz/1559336151.980071068.xyz';
     max_dist = 5;
     min_dist = 2;
 
