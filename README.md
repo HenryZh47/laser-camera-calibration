@@ -1,6 +1,7 @@
 # LiDAR-Camera Calibration Toolbox
 
-This repository contains toolbox and data management utilities for sensor calibration. All the extrinsic parameters of the sensors are calibrated to a VLP-16 LiDAR.
+This repository is a set of toolbox and utilities to calibrate the extrinsic parameters 
+between a LiDAR and a camera.
 
 ## Dependencies
 
@@ -50,3 +51,6 @@ In xyz folder, run matlab script `project_to_cam_main.m` from `/util` to show th
 
 See if the discontinuities of the lidar points are reasonable in the image (e.g. edge of the checker board).
 
+### Credit
+* [The Laser-Camera Calibration Toolbox](http://www.cs.cmu.edu/~ranjith/lcct.html)
+* [Laser-Camera-Calibration-Toolbox](https://github.com/zhixy/Laser-Camera-Calibration-Toolbox)
