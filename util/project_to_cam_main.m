@@ -1,8 +1,8 @@
 %% Project Velodyne points to camera
-CAMERA_INFO_PATH = './../image/Calib_Results.mat';
+CAMERA_INFO_PATH = './../images/Calib_Results.mat';
 
-PC_PATH = './target3.xyz';
-IMG_PATH = './../image/image_rect03.bmp';
+PC_PATH = './target_scan10.xyz';
+IMG_PATH = './../images/image_rect10.bmp';
 
 %%  Load intrinsics and extrinsics parameters
 % Intrinsics
@@ -29,9 +29,9 @@ points_transformed = K * T * points;
 points_transformed = points_transformed ./ repmat(points_transformed(3,:), 3, 1);
 size(points_transformed)
 visible_points_index = (points_transformed(1,:)>0 & ...
-                        points_transformed(1,:)<640 & ...
+                        points_transformed(1,:)<1024 & ...
                         points_transformed(2,:)>0 & ...
-                        points_transformed(2,:)<512);
+                        points_transformed(2,:)<770);
 points_visible = points_transformed(:,visible_points_index);
 points_visible_uv = uint32(points_visible(1:2, :));
 

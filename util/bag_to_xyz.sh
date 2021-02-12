@@ -4,7 +4,7 @@
 # Source bag file directory: /home/henryzh47/Projects/flir_thermal_camera_calibration/data/lidar_thermal_extrinsics/2019-05-31-bag
 # Target xyz file directory: /home/henryzh47/Projects/flir_thermal_camera_calibration/data/lidar_thermal_extrinsics/2019-05-31-xyz
 
-DATA_DIR=/media/henryzh47/henry-logging-2/rosbags/2020-05-21-ds-ueye-calibration/cam-lidar
+DATA_DIR=/home/henryzh47/logging/LOCAL/2021-02-11-ds-calibrations/ds3/laser-cam
 BAG_DIR=$DATA_DIR/bag
 PCD_DIR=$DATA_DIR/pcd
 XYZ_DIR=$DATA_DIR/xyz
@@ -32,7 +32,7 @@ do
 	# run the MATLAB script to trim the point cloud and save to xyz dir
 	sleep 1
 	cd $UTIL_DIR
-	matlab -nodisplay -batch 'pcd_trim("/media/henryzh47/henry-logging-2/rosbags/2020-05-21-ds-ueye-calibration/cam-lidar/pcd/source.pcd", "/media/henryzh47/henry-logging-2/rosbags/2020-05-21-ds-ueye-calibration/cam-lidar/xyz/target.xyz")'
+	matlab -nodisplay -batch 'pcd_trim("/home/henryzh47/logging/LOCAL/2021-02-11-ds-calibrations/ds3/laser-cam/pcd/source.pcd", "/home/henryzh47/logging/LOCAL/2021-02-11-ds-calibrations/ds3/laser-cam/xyz/target.xyz")'
 	cd $XYZ_DIR
 	mv ./target.xyz target_scan$xyz_index.xyz
 	xyz_index=$(($xyz_index+1))

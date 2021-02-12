@@ -3,7 +3,7 @@ function [] = pcd_trim(CLOUD_PATH, OUTPUT_PATH)
     %% PCD trim for lidar-camera calibration
     %% parameters
     max_dist = 5;
-    min_dist = 2;
+    min_dist = 0.25;
 
     %% Read in the PCD file
     ptCloud = pcread(CLOUD_PATH);
